@@ -10,7 +10,7 @@ class SplashScreen extends StatelessWidget {
       width: MediaQuery.of(context).size.width,
       color: Colors.purple.shade700,
       child: Center(
-        child: Image.asset('assets/nubank_splash_logo.png'),
+        child: Image.asset('assets/nubank_splash.png'),
       ),
     );
   }
