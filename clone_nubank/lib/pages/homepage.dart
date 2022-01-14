@@ -89,7 +89,7 @@ class _HomePageState extends State<HomePage> {
                 CustomColumn(
                   text: 'Área Pix',
                   onPressed: () {},
-                  icon: Icons.ac_unit,
+                  icon: Icons.pix,
                 )
               ],
             )

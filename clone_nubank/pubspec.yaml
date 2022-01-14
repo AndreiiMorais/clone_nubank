@@ -75,9 +75,9 @@ flutter:
   # example:
 
   fonts:
-   - family:  pix_icon
+   - family:  AppIcons
      fonts:
-      - asset: assets/pix_icon.ttf
+      - asset: assets/fonts/AppIcons.ttf
   #   - family: Trajan Pro
   #     fonts:
   #       - asset: fonts/TrajanPro.ttf
