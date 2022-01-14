@@ -59,7 +59,7 @@ class _HomePageState extends State<HomePage> {
             ],
           ),
         ],
-        body: Column(
+        body: ListView(
           children: [
             Padding(
               padding: const EdgeInsets.only(top: 20, left: 15, right: 15),
