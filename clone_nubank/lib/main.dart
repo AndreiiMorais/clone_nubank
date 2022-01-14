@@ -1,5 +1,6 @@
 import 'package:clone_nubank/pages/homepage.dart';
 import 'package:clone_nubank/pages/login_page.dart';
+import 'package:clone_nubank/themes/themes.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,10 +13,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.purple,// alterar tema
-      ),
+      theme: theme,
       home: HomePage(),
     );
   }
