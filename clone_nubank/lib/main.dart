@@ -1,3 +1,4 @@
+import 'package:clone_nubank/pages/homepage.dart';
 import 'package:clone_nubank/pages/login_page.dart';
 import 'package:flutter/material.dart';
 
@@ -13,9 +14,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.purple,// alterar tema
       ),
-      home: LoginPage(),
+      home: HomePage(),
     );
   }
 }
