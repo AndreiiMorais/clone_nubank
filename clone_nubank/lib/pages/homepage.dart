@@ -1,3 +1,4 @@
+import 'package:clone_nubank/widgets/custom_column.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -82,6 +83,15 @@ class _HomePageState extends State<HomePage> {
                   size: 17,
                 ),
               ),
+            ),
+            Row(
+              children: [
+                CustomColumn(
+                  text: 'Área Pix',
+                  onPressed: () {},
+                  icon: Icons.,
+                )
+              ],
             )
           ],
         ),
