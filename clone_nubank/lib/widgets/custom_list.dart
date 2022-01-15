@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 
 class CustomList extends StatelessWidget {
   final List<Widget> children;
@@ -23,23 +24,26 @@ class CustomList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.separated(
-      shrinkWrap: true,
-      itemCount: 1,
-      separatorBuilder: (context, index) => const Divider(),
-      itemBuilder: (context, index) {
-        return ListTile(
-          trailing: Padding(
-            padding: const EdgeInsets.only(top: 38),
-            child: trailing,
+    return Card(
+      elevation: 5,
+      child: ListView(
+        padding: const EdgeInsets.only(top: 10, bottom: 20),
+        physics: const NeverScrollableScrollPhysics(),
+        shrinkWrap: true,
+        children: [
+          ListTile(
+            trailing: Padding(
+              padding: const EdgeInsets.only(top: 38),
+              child: trailing,
+            ),
+            title: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: children,
+            ),
           ),
-          title: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: children,
-          ),
-        );
-      },
+        ],
+      ),
     );
   }
 }

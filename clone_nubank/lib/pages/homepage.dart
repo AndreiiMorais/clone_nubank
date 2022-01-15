@@ -65,7 +65,11 @@ class _HomePageState extends State<HomePage> {
         ],
         body: ListView(
           physics: const BouncingScrollPhysics(),
-          padding: const EdgeInsets.only(top: 15, left: 15, right: 15),
+          padding: const EdgeInsets.only(
+            top: 15,
+            left: 15,
+            right: 15,
+          ),
           children: [
             ListTile(
               onTap: () {},
@@ -158,68 +162,74 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
             ),
-            SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              physics: const BouncingScrollPhysics(),
-              child: Row(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(left: 12),
-                    child: CustomDecoratedBox(
-                      width: 300,
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: ListTile(
-                          title: RichText(
-                            text: TextSpan(
-                              text: 'Você tem até ',
-                              style: const TextStyle(
-                                  fontSize: 17, color: Colors.black),
-                              children: [
-                                TextSpan(
-                                  text: 'R\$ 2.500,00 ',
-                                  style:
-                                      TextStyle(color: Colors.purple.shade700),
-                                ),
-                                const TextSpan(
-                                  text: 'disponíveis para empréstimo.',
-                                  style: TextStyle(
+            Card(
+              elevation: 5,
+              child: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                physics: const BouncingScrollPhysics(),
+                child: Padding(
+                  padding: const EdgeInsets.only(bottom: 20),
+                  child: Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(left: 12),
+                        child: CustomDecoratedBox(
+                          width: 300,
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: ListTile(
+                              title: RichText(
+                                text: TextSpan(
+                                  text: 'Você tem até ',
+                                  style: const TextStyle(
                                       fontSize: 17, color: Colors.black),
+                                  children: [
+                                    TextSpan(
+                                      text: 'R\$ 2.500,00 ',
+                                      style: TextStyle(
+                                          color: Colors.purple.shade700),
+                                    ),
+                                    const TextSpan(
+                                      text: 'disponíveis para empréstimo.',
+                                      style: TextStyle(
+                                          fontSize: 17, color: Colors.black),
+                                    ),
+                                  ],
                                 ),
-                              ],
+                              ),
                             ),
                           ),
                         ),
                       ),
-                    ),
+                      Padding(
+                        padding: const EdgeInsets.all(12.0),
+                        child: CustomDecoratedBox(
+                          height: 90,
+                          width: 300,
+                          child: Center(
+                            child: ListTile(
+                              title: RichText(
+                                text: TextSpan(
+                                  text: 'Salve seus amigos da burocracia. ',
+                                  style: const TextStyle(
+                                      fontSize: 17, color: Colors.black),
+                                  children: [
+                                    TextSpan(
+                                      text: 'Faça um convite ...',
+                                      style: TextStyle(
+                                          color: Colors.purple.shade700,
+                                          fontSize: 17),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      )
+                    ],
                   ),
-                  Padding(
-                    padding: const EdgeInsets.all(12.0),
-                    child: CustomDecoratedBox(
-                      height: 90,
-                      width: 300,
-                      child: Center(
-                        child: ListTile(
-                          title: RichText(
-                            text: TextSpan(
-                              text: 'Salve seus amigos da burocracia. ',
-                              style: const TextStyle(
-                                  fontSize: 17, color: Colors.black),
-                              children: [
-                                TextSpan(
-                                  text: 'Faça um convite ...',
-                                  style: TextStyle(
-                                      color: Colors.purple.shade700,
-                                      fontSize: 17),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  )
-                ],
+                ),
               ),
             ),
             CustomList(
@@ -261,7 +271,47 @@ class _HomePageState extends State<HomePage> {
                   style: TextStyle(color: Colors.grey.shade800),
                 ),
               ],
-            )
+            ),
+            CustomList(
+              arrow: true,
+              children: [
+                const Padding(
+                  padding: EdgeInsets.only(top: 10, bottom: 10),
+                  child: Align(
+                    alignment: Alignment.centerLeft,
+                    child: Icon(Icons.credit_card_rounded),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 10),
+                  child: Text(
+                    'Cartão de crédito',
+                    style: Theme.of(context).textTheme.headline5,
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 10, bottom: 10),
+                  child: Text(
+                    'Fatura atual',
+                    style: TextStyle(
+                        fontSize: 17,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.grey.shade700),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 5),
+                  child: Text(
+                    'R\$ 10,00',
+                    style: Theme.of(context).textTheme.headline4,
+                  ),
+                ),
+                Text(
+                  'Limite disponível de R\$ 190,00',
+                  style: TextStyle(color: Colors.grey.shade800),
+                ),
+              ],
+            ),
           ],
         ),
       ),
