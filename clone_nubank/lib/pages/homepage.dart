@@ -1,6 +1,6 @@
 import 'package:clone_nubank/widgets/custom_column.dart';
 import 'package:flutter/material.dart';
-import 'package:clone_nubank/icons/my_flutter_app_icons.dart';
+import '../my_flutter_app_icons.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
