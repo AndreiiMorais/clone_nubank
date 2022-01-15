@@ -85,6 +85,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             SingleChildScrollView(
+              physics: BouncingScrollPhysics(),
               scrollDirection: Axis.horizontal,
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -116,10 +117,46 @@ class _HomePageState extends State<HomePage> {
                     icon: MdiIcons.handCoin,
                   ),
                   CustomColumn(
-                      text: 'Recarga de Celular',
-                      onPressed: () {},
-                      icon: Icons.phone_android_rounded),
+                    text: 'Recarga de Celular',
+                    onPressed: () {},
+                    icon: Icons.phone_android_rounded,
+                  ),
+                  CustomColumn(
+                    text: 'Cobrar',
+                    onPressed: () {},
+                    icon: MdiIcons.chatAlertOutline,
+                  ),
+                  CustomColumn(
+                    text: 'Doação',
+                    onPressed: () {},
+                    icon: MdiIcons.cardsHeartOutline,
+                  ),
+                  CustomColumn(
+                    text: 'Transferir Internac.',
+                    onPressed: () {},
+                    icon: MdiIcons.webCheck,
+                  )
                 ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 12, right: 12),
+              child: Container(
+                decoration: BoxDecoration(
+                    color: Colors.grey[350],
+                    borderRadius: BorderRadius.circular(10)),
+                child: const ListTile(
+                  contentPadding: EdgeInsets.only(left: 20),
+                  horizontalTitleGap: 0,
+                  leading: Icon(
+                    Icons.credit_card_rounded,
+                    color: Colors.black,
+                  ),
+                  title: Text(
+                    'Meus Cartões',
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
+                ),
               ),
             )
           ],
