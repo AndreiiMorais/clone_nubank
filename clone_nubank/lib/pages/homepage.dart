@@ -1,5 +1,6 @@
 import 'package:clone_nubank/widgets/custom_column.dart';
 import 'package:flutter/material.dart';
+import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import '../my_flutter_app_icons.dart';
 
 class HomePage extends StatefulWidget {
@@ -83,19 +84,32 @@ class _HomePageState extends State<HomePage> {
                 size: 17,
               ),
             ),
-            Row(
-              children: [
-                CustomColumn(
-                  text: 'Área Pix',
-                  onPressed: () {},
-                  icon: Icons.local_parking_outlined,
-                ),
-                CustomColumn(
-                  text: 'Pagar',
-                  onPressed: () {},
-                  icon: Icons.,
-                )
-              ],
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  CustomColumn(
+                    text: 'Área Pix',
+                    onPressed: () {},
+                    icon: Icons.local_parking_outlined,
+                  ),
+                  CustomColumn(
+                    text: 'Pagar',
+                    onPressed: () {},
+                    icon: MdiIcons.barcode,
+                  ),
+                  CustomColumn(
+                    text: 'Transferir',
+                    onPressed: () {},
+                    icon: MdiIcons.cashFast,
+                  ),
+                  CustomColumn(
+                    text: 'Depositar',
+                    onPressed: () {},
+                    icon: MdiIcons.cashPlus,
+                  )
+                ],
+              ),
             )
           ],
         ),

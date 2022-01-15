@@ -14,18 +14,25 @@ class CustomColumn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 45),
+      padding: const EdgeInsets.only(top: 45, left: 10),
       child: Column(
         children: [
-          IconButton(
-            icon: Icon(icon),
-            onPressed: onPressed,
+          CircleAvatar(
+            radius: 40,
+            backgroundColor: Colors.grey[350],
+            child: IconButton(
+              icon: Icon(
+                icon,
+                color: Colors.black,
+              ),
+              onPressed: onPressed,
+            ),
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 30),
+            padding: const EdgeInsets.only(top: 15),
             child: Text(
               text,
-              style: TextStyle(fontWeight: FontWeight.bold),
+              style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 17),
             ),
           ),
         ],
