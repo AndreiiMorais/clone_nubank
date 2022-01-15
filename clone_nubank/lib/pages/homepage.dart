@@ -1,6 +1,6 @@
 import 'package:clone_nubank/widgets/custom_column.dart';
 import 'package:flutter/material.dart';
-
+import 'package:clone_nubank/icons/my_flutter_app_icons.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -40,7 +40,7 @@ class _HomePageState extends State<HomePage> {
             actions: [
               IconButton(
                 splashColor: Colors.purple.shade900,
-                icon: const Icon(Icons.remove_red_eye_outlined),
+                icon: Icon(MyFlutterApp.eye_closed_),
                 onPressed: () {},
               ),
               IconButton(
@@ -90,7 +90,7 @@ class _HomePageState extends State<HomePage> {
                 CustomColumn(
                   text: 'Área Pix',
                   onPressed: () {},
-                  icon: ,
+                  icon: MyFlutterApp.eye_closed_,
                 )
               ],
             )
