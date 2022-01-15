@@ -16,6 +16,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: NestedScrollView(
+        physics: const BouncingScrollPhysics(),
         headerSliverBuilder: (context, innerBoxIsScrolled) => [
           SliverAppBar(
             backgroundColor: Colors.purple.shade700,
@@ -37,7 +38,7 @@ class _HomePageState extends State<HomePage> {
             ),
             bottom: AppBar(
               backgroundColor: Colors.purple.shade700,
-              title: Text('Olá, Usuário'),
+              title: const Text('Olá, Usuário'),
             ),
             actions: [
               IconButton(
@@ -64,7 +65,7 @@ class _HomePageState extends State<HomePage> {
           ),
         ],
         body: ListView(
-          physics: const BouncingScrollPhysics(),
+          physics: NeverScrollableScrollPhysics(),
           padding: const EdgeInsets.only(
             top: 15,
           ),
@@ -451,7 +452,7 @@ class _HomePageState extends State<HomePage> {
                         child: Text('Indique seus amigos',
                             style: Theme.of(context).textTheme.headline6),
                       ),
-                      Text(
+                      const Text(
                           'Mostre aos seus amigos como é fácil ter uma vida sem burocracia.'),
                       Padding(
                         padding: const EdgeInsets.only(top: 8),
@@ -460,8 +461,8 @@ class _HomePageState extends State<HomePage> {
                               color: Colors.purple.shade700,
                               shape: BoxShape.rectangle,
                               borderRadius: BorderRadius.circular(20)),
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
+                          child: const Padding(
+                            padding: EdgeInsets.all(8.0),
                             child: Text(
                               'Indicar amigos',
                               style: TextStyle(color: Colors.white),
