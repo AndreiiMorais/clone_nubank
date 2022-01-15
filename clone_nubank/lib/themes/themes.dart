@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 final theme = ThemeData(
   primaryColor: Colors.purple.shade700,
   textTheme: const TextTheme(
+    bodyText2: TextStyle(color: Colors.black, fontSize: 20),
     headline4: TextStyle(
       color: Colors.black,
       fontSize: 28,

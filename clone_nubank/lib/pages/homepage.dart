@@ -1,4 +1,5 @@
 import 'package:clone_nubank/widgets/custom_column.dart';
+import 'package:clone_nubank/widgets/custom_decoratedbox.dart';
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import '../my_flutter_app_icons.dart';
@@ -139,13 +140,10 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.only(left: 12, right: 12),
-              child: Container(
-                decoration: BoxDecoration(
-                    color: Colors.grey[350],
-                    borderRadius: BorderRadius.circular(10)),
-                child: const ListTile(
+            const Padding(
+              padding: EdgeInsets.only(left: 12, right: 12),
+              child: CustomDecoratedBox(
+                child: ListTile(
                   contentPadding: EdgeInsets.only(left: 20),
                   horizontalTitleGap: 0,
                   leading: Icon(
@@ -155,6 +153,30 @@ class _HomePageState extends State<HomePage> {
                   title: Text(
                     'Meus Cartões',
                     style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(12.0),
+              child: CustomDecoratedBox(
+                child: Padding(
+                  padding: const EdgeInsets.all(20.0),
+                  child: RichText(
+                    text: TextSpan(
+                      text: 'Você tem até ',
+                      style: Theme.of(context).textTheme.bodyText2,
+                      children: [
+                        TextSpan(
+                          text: 'R\$ 2.500,00 ',
+                          style: TextStyle(color: Colors.purple.shade700),
+                        ),
+                        TextSpan(
+                          text: 'disponíveis para empréstimo.',
+                          style: Theme.of(context).textTheme.bodyText2,
+                        )
+                      ],
+                    ),
                   ),
                 ),
               ),
