@@ -2,7 +2,6 @@ import 'package:clone_nubank/widgets/custom_column.dart';
 import 'package:clone_nubank/widgets/custom_decoratedbox.dart';
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
-import '../my_flutter_app_icons.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -42,7 +41,7 @@ class _HomePageState extends State<HomePage> {
             actions: [
               IconButton(
                 splashColor: Colors.purple.shade900,
-                icon: Icon(Icons.remove_red_eye_rounded),
+                icon: const Icon(Icons.remove_red_eye_rounded),
                 onPressed: () {},
               ),
               IconButton(
@@ -64,7 +63,8 @@ class _HomePageState extends State<HomePage> {
           ),
         ],
         body: ListView(
-          padding: EdgeInsets.only(top: 15, left: 15, right: 15),
+          physics: const BouncingScrollPhysics(),
+          padding: const EdgeInsets.only(top: 15, left: 15, right: 15),
           children: [
             ListTile(
               onTap: () {},
@@ -86,7 +86,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             SingleChildScrollView(
-              physics: BouncingScrollPhysics(),
+              physics: const BouncingScrollPhysics(),
               scrollDirection: Axis.horizontal,
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -113,7 +113,7 @@ class _HomePageState extends State<HomePage> {
                     icon: MdiIcons.cashPlus,
                   ),
                   CustomColumn(
-                    text: 'Pegar emprestado',
+                    text: 'Pegar emprestad',
                     onPressed: () {},
                     icon: MdiIcons.handCoin,
                   ),
@@ -140,46 +140,94 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
             ),
-            const Padding(
-              padding: EdgeInsets.only(left: 12, right: 12),
+            Padding(
+              padding: const EdgeInsets.only(left: 12, right: 12, bottom: 12),
               child: CustomDecoratedBox(
+                width: 338,
                 child: ListTile(
-                  contentPadding: EdgeInsets.only(left: 20),
                   horizontalTitleGap: 0,
-                  leading: Icon(
+                  leading: const Icon(
                     Icons.credit_card_rounded,
                     color: Colors.black,
                   ),
                   title: Text(
                     'Meus Cartões',
-                    style: TextStyle(fontWeight: FontWeight.bold),
+                    style: Theme.of(context).textTheme.bodyText1,
                   ),
                 ),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.all(12.0),
-              child: CustomDecoratedBox(
-                child: Padding(
-                  padding: const EdgeInsets.all(20.0),
-                  child: RichText(
-                    text: TextSpan(
-                      text: 'Você tem até ',
-                      style: Theme.of(context).textTheme.bodyText2,
-                      children: [
-                        TextSpan(
-                          text: 'R\$ 2.500,00 ',
-                          style: TextStyle(color: Colors.purple.shade700),
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              physics: const BouncingScrollPhysics(),
+              child: Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(left: 12),
+                    child: CustomDecoratedBox(
+                      width: 300,
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: ListTile(
+                          title: RichText(
+                            text: TextSpan(
+                              text: 'Você tem até ',
+                              style: const TextStyle(
+                                  fontSize: 17, color: Colors.black),
+                              children: [
+                                TextSpan(
+                                  text: 'R\$ 2.500,00 ',
+                                  style:
+                                      TextStyle(color: Colors.purple.shade700),
+                                ),
+                                const TextSpan(
+                                  text: 'disponíveis para empréstimo.',
+                                  style: TextStyle(
+                                      fontSize: 17, color: Colors.black),
+                                ),
+                              ],
+                            ),
+                          ),
                         ),
-                        TextSpan(
-                          text: 'disponíveis para empréstimo.',
-                          style: Theme.of(context).textTheme.bodyText2,
-                        )
-                      ],
+                      ),
                     ),
                   ),
-                ),
+                  Padding(
+                    padding: const EdgeInsets.all(12.0),
+                    child: CustomDecoratedBox(
+                      height: 90,
+                      width: 300,
+                      child: Center(
+                        child: ListTile(
+                          title: RichText(
+                            text: TextSpan(
+                              text: 'Salve seus amigos da burocracia. ',
+                              style: const TextStyle(
+                                  fontSize: 17, color: Colors.black),
+                              children: [
+                                TextSpan(
+                                  text: 'Faça um convite ...',
+                                  style: TextStyle(
+                                      color: Colors.purple.shade700,
+                                      fontSize: 17),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  )
+                ],
               ),
+            ),
+            ListView.separated(
+              physics: NeverScrollableScrollPhysics(),
+              itemCount: 2,
+              separatorBuilder: (context, index) => const Divider(),
+              itemBuilder: (context, index) {
+                return Text('teste');
+              },
             )
           ],
         ),

@@ -14,7 +14,7 @@ class CustomColumn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 45),
+      padding: const EdgeInsets.only(top: 45, bottom: 30),
       child: SizedBox(
         width: 92,
         child: Column(
@@ -35,8 +35,7 @@ class CustomColumn extends StatelessWidget {
               padding: const EdgeInsets.only(top: 15),
               child: Text(
                 text,
-                style:
-                    const TextStyle(fontWeight: FontWeight.bold, fontSize: 17),
+                style: Theme.of(context).textTheme.bodyText1,
                 softWrap: true,
                 textAlign: TextAlign.center,
               ),
