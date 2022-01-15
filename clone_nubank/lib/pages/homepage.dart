@@ -36,7 +36,7 @@ class _HomePageState extends State<HomePage> {
             ),
             bottom: AppBar(
               backgroundColor: Colors.purple.shade700,
-              title: Text('Olá, Andrei'),
+              title: Text('Olá, Usuário'),
             ),
             actions: [
               IconButton(
@@ -54,7 +54,7 @@ class _HomePageState extends State<HomePage> {
                 child: IconButton(
                   splashColor: Colors.purple.shade900,
                   icon: const Icon(
-                    Icons.mail_outline,
+                    MdiIcons.emailPlusOutline,
                   ),
                   onPressed: () {},
                 ),
@@ -76,7 +76,7 @@ class _HomePageState extends State<HomePage> {
               ),
               subtitle: Padding(
                 padding: const EdgeInsets.only(top: 17),
-                child: Text('R\$169,09',
+                child: Text('R\$ 0,00',
                     style: Theme.of(context).textTheme.headline4),
               ),
               trailing: const Icon(
