@@ -6,6 +6,7 @@ final theme = ThemeData(
     bodyText1: TextStyle(
         color: Colors.black, fontSize: 18, fontWeight: FontWeight.bold),
     bodyText2: TextStyle(color: Colors.black, fontSize: 18),
+    headline6: TextStyle(color: Colors.black),
     headline4: TextStyle(
       color: Colors.black,
       fontSize: 28,
