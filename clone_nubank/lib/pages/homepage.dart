@@ -1,5 +1,6 @@
 import 'package:clone_nubank/widgets/custom_column.dart';
 import 'package:clone_nubank/widgets/custom_decoratedbox.dart';
+import 'package:clone_nubank/widgets/custom_list.dart';
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
@@ -221,13 +222,45 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
             ),
-            ListView.separated(
-              physics: NeverScrollableScrollPhysics(),
-              itemCount: 2,
-              separatorBuilder: (context, index) => const Divider(),
-              itemBuilder: (context, index) {
-                return Text('teste');
-              },
+            CustomList(
+              arrow: true,
+              children: [
+                const Padding(
+                  padding: EdgeInsets.only(top: 10, bottom: 10),
+                  child: Align(
+                    alignment: Alignment.centerLeft,
+                    child: Icon(Icons.credit_card_rounded),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 10),
+                  child: Text(
+                    'Cartão de crédito',
+                    style: Theme.of(context).textTheme.headline5,
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 10, bottom: 10),
+                  child: Text(
+                    'Fatura atual',
+                    style: TextStyle(
+                        fontSize: 17,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.grey.shade700),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 5),
+                  child: Text(
+                    'R\$ 10,00',
+                    style: Theme.of(context).textTheme.headline4,
+                  ),
+                ),
+                Text(
+                  'Limite disponível de R\$ 190,00',
+                  style: TextStyle(color: Colors.grey.shade800),
+                ),
+              ],
             )
           ],
         ),
