@@ -87,6 +87,8 @@ class _HomePageState extends State<HomePage> {
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   CustomColumn(
                     text: 'Área Pix',
@@ -107,7 +109,16 @@ class _HomePageState extends State<HomePage> {
                     text: 'Depositar',
                     onPressed: () {},
                     icon: MdiIcons.cashPlus,
-                  )
+                  ),
+                  CustomColumn(
+                    text: 'Pegar emprestado',
+                    onPressed: () {},
+                    icon: MdiIcons.handCoin,
+                  ),
+                  CustomColumn(
+                      text: 'Recarga de Celular',
+                      onPressed: () {},
+                      icon: Icons.phone_android_rounded),
                 ],
               ),
             )
