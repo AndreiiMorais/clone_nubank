@@ -40,7 +40,7 @@ class _HomePageState extends State<HomePage> {
             actions: [
               IconButton(
                 splashColor: Colors.purple.shade900,
-                icon: Icon(MyFlutterApp.eye_closed_),
+                icon: Icon(Icons.remove_red_eye_rounded),
                 onPressed: () {},
               ),
               IconButton(
@@ -62,27 +62,25 @@ class _HomePageState extends State<HomePage> {
           ),
         ],
         body: ListView(
+          padding: EdgeInsets.only(top: 15, left: 15, right: 15),
           children: [
-            Padding(
-              padding: const EdgeInsets.only(top: 20, left: 15, right: 15),
-              child: ListTile(
-                onTap: () {},
-                title: Padding(
-                  padding: const EdgeInsets.only(top: 5),
-                  child: Text(
-                    'Conta',
-                    style: Theme.of(context).textTheme.headline5,
-                  ),
+            ListTile(
+              onTap: () {},
+              title: Padding(
+                padding: const EdgeInsets.only(top: 10),
+                child: Text(
+                  'Conta',
+                  style: Theme.of(context).textTheme.headline5,
                 ),
-                subtitle: Padding(
-                  padding: const EdgeInsets.only(top: 20),
-                  child:
-                      Text('sub', style: Theme.of(context).textTheme.headline3),
-                ),
-                trailing: const Icon(
-                  Icons.arrow_forward_ios_rounded,
-                  size: 17,
-                ),
+              ),
+              subtitle: Padding(
+                padding: const EdgeInsets.only(top: 17),
+                child: Text('R\$169,09',
+                    style: Theme.of(context).textTheme.headline4),
+              ),
+              trailing: const Icon(
+                Icons.arrow_forward_ios_rounded,
+                size: 17,
               ),
             ),
             Row(
@@ -90,7 +88,12 @@ class _HomePageState extends State<HomePage> {
                 CustomColumn(
                   text: 'Área Pix',
                   onPressed: () {},
-                  icon: MyFlutterApp.eye_closed_,
+                  icon: Icons.local_parking_outlined,
+                ),
+                CustomColumn(
+                  text: 'Pagar',
+                  onPressed: () {},
+                  icon: Icons.,
                 )
               ],
             )

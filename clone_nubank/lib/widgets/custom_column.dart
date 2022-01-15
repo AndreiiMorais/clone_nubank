@@ -13,14 +13,23 @@ class CustomColumn extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Text(text),
-        IconButton(
-          icon: Icon(icon),
-          onPressed: onPressed,
-        )
-      ],
+    return Padding(
+      padding: const EdgeInsets.only(top: 45),
+      child: Column(
+        children: [
+          IconButton(
+            icon: Icon(icon),
+            onPressed: onPressed,
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 30),
+            child: Text(
+              text,
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
