@@ -12,15 +12,18 @@ class ConfigPageListTile extends StatelessWidget {
       shape: const BeveledRectangleBorder(),
       margin: const EdgeInsets.only(top: 2),
       elevation: 3,
-      child: ListTile(
-        leading: Icon(icon),
-        title: Text(
-          text,
-          style: Theme.of(context).textTheme.bodyText1,
-        ),
-        trailing: const Icon(
-          Icons.arrow_forward_ios,
-          size: 15,
+      child: Padding(
+        padding: const EdgeInsets.only(left: 10, right: 10),
+        child: ListTile(
+          leading: Icon(icon),
+          title: Text(
+            text,
+            style: Theme.of(context).textTheme.bodyText1,
+          ),
+          trailing: const Icon(
+            Icons.arrow_forward_ios,
+            size: 15,
+          ),
         ),
       ),
     );
