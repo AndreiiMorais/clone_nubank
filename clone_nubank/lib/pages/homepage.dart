@@ -1,6 +1,7 @@
 import 'package:clone_nubank/widgets/custom_column.dart';
 import 'package:clone_nubank/widgets/custom_decoratedbox.dart';
 import 'package:clone_nubank/widgets/custom_list.dart';
+import 'package:clone_nubank/widgets/custom_row.dart';
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
@@ -65,97 +66,83 @@ class _HomePageState extends State<HomePage> {
           ),
         ],
         body: ListView(
-          physics: NeverScrollableScrollPhysics(),
+          physics: const NeverScrollableScrollPhysics(),
           padding: const EdgeInsets.only(
             top: 15,
           ),
           children: [
-            ListTile(
-              onTap: () {},
-              title: Padding(
-                padding: const EdgeInsets.only(top: 10, left: 15),
-                child: Text(
-                  'Conta',
-                  style: Theme.of(context).textTheme.headline5,
+            Padding(
+              padding: const EdgeInsets.only(left: 15, right: 15),
+              child: ListTile(
+                onTap: () {},
+                title: Padding(
+                  padding: const EdgeInsets.only(bottom: 20),
+                  child: Text(
+                    'Conta',
+                    style: Theme.of(context).textTheme.headline5,
+                  ),
                 ),
-              ),
-              subtitle: Padding(
-                padding: const EdgeInsets.only(top: 17, left: 15),
-                child: Text('R\$ 0,00',
+                subtitle: Text('R\$ 0,00',
                     style: Theme.of(context).textTheme.headline4),
-              ),
-              trailing: const Padding(
-                padding: EdgeInsets.only(right: 15),
-                child: Icon(
+                trailing: const Icon(
                   Icons.arrow_forward_ios_rounded,
                   size: 17,
                 ),
               ),
             ),
-            SingleChildScrollView(
-              physics: const BouncingScrollPhysics(),
-              scrollDirection: Axis.horizontal,
-              child: Padding(
-                padding: const EdgeInsets.only(left: 15),
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    CustomColumn(
-                      text: 'Área Pix',
-                      onPressed: () {},
-                      icon: Icons.local_parking_outlined,
-                    ),
-                    CustomColumn(
-                      text: 'Pagar',
-                      onPressed: () {},
-                      icon: MdiIcons.barcode,
-                    ),
-                    CustomColumn(
-                      text: 'Transferir',
-                      onPressed: () {},
-                      icon: MdiIcons.cashFast,
-                    ),
-                    CustomColumn(
-                      text: 'Depositar',
-                      onPressed: () {},
-                      icon: MdiIcons.cashPlus,
-                    ),
-                    CustomColumn(
-                      text: 'Pegar emprestad',
-                      onPressed: () {},
-                      icon: MdiIcons.handCoin,
-                    ),
-                    CustomColumn(
-                      text: 'Recarga de Celular',
-                      onPressed: () {},
-                      icon: Icons.phone_android_rounded,
-                    ),
-                    CustomColumn(
-                      text: 'Cobrar',
-                      onPressed: () {},
-                      icon: MdiIcons.chatAlertOutline,
-                    ),
-                    CustomColumn(
-                      text: 'Doação',
-                      onPressed: () {},
-                      icon: MdiIcons.cardsHeartOutline,
-                    ),
-                    CustomColumn(
-                      text: 'Transferir Internac.',
-                      onPressed: () {},
-                      icon: MdiIcons.webCheck,
-                    )
-                  ],
+            CustomRow(
+              children: [
+                CustomColumn(
+                  text: 'Área Pix',
+                  onPressed: () {},
+                  icon: Icons.local_parking_outlined,
                 ),
-              ),
+                CustomColumn(
+                  text: 'Pagar',
+                  onPressed: () {},
+                  icon: MdiIcons.barcode,
+                ),
+                CustomColumn(
+                  text: 'Transferir',
+                  onPressed: () {},
+                  icon: MdiIcons.cashFast,
+                ),
+                CustomColumn(
+                  text: 'Depositar',
+                  onPressed: () {},
+                  icon: MdiIcons.cashPlus,
+                ),
+                CustomColumn(
+                  text: 'Pegar emprestad',
+                  onPressed: () {},
+                  icon: MdiIcons.handCoin,
+                ),
+                CustomColumn(
+                  text: 'Recarga de Celular',
+                  onPressed: () {},
+                  icon: Icons.phone_android_rounded,
+                ),
+                CustomColumn(
+                  text: 'Cobrar',
+                  onPressed: () {},
+                  icon: MdiIcons.chatAlertOutline,
+                ),
+                CustomColumn(
+                  text: 'Doação',
+                  onPressed: () {},
+                  icon: MdiIcons.cardsHeartOutline,
+                ),
+                CustomColumn(
+                  text: 'Transferir Internac.',
+                  onPressed: () {},
+                  icon: MdiIcons.webCheck,
+                ),
+              ],
             ),
             Padding(
               padding: const EdgeInsets.only(left: 20, right: 20, bottom: 12),
               child: CustomDecoratedBox(
-                width: 338,
                 child: ListTile(
-                  horizontalTitleGap: 0,
                   leading: const Icon(
                     Icons.credit_card_rounded,
                     color: Colors.black,
@@ -173,35 +160,30 @@ class _HomePageState extends State<HomePage> {
                 scrollDirection: Axis.horizontal,
                 physics: const BouncingScrollPhysics(),
                 child: Padding(
-                  padding: const EdgeInsets.only(bottom: 20, left: 5),
+                  padding: const EdgeInsets.only(bottom: 20, left: 15),
                   child: Row(
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.only(left: 12),
-                        child: CustomDecoratedBox(
-                          width: 300,
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: ListTile(
-                              title: RichText(
-                                text: TextSpan(
-                                  text: 'Você tem até ',
-                                  style: const TextStyle(
-                                      fontSize: 17, color: Colors.black),
-                                  children: [
-                                    TextSpan(
-                                      text: 'R\$ 2.500,00 ',
-                                      style: TextStyle(
-                                          color: Colors.purple.shade700),
-                                    ),
-                                    const TextSpan(
-                                      text: 'disponíveis para empréstimo.',
-                                      style: TextStyle(
-                                          fontSize: 17, color: Colors.black),
-                                    ),
-                                  ],
+                      CustomDecoratedBox(
+                        width: 300,
+                        height: 90,
+                        child: ListTile(
+                          title: RichText(
+                            text: TextSpan(
+                              text: 'Você tem até ',
+                              style: const TextStyle(
+                                  fontSize: 17, color: Colors.black),
+                              children: [
+                                TextSpan(
+                                  text: 'R\$ 2.500,00 ',
+                                  style:
+                                      TextStyle(color: Colors.purple.shade700),
                                 ),
-                              ),
+                                const TextSpan(
+                                  text: 'disponíveis para empréstimo.',
+                                  style: TextStyle(
+                                      fontSize: 17, color: Colors.black),
+                                ),
+                              ],
                             ),
                           ),
                         ),
@@ -287,15 +269,12 @@ class _HomePageState extends State<HomePage> {
                     child: Icon(MdiIcons.handCoin),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(bottom: 10),
-                  child: Text(
-                    'Empréstimo',
-                    style: Theme.of(context).textTheme.headline5,
-                  ),
+                Text(
+                  'Empréstimo',
+                  style: Theme.of(context).textTheme.headline5,
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(top: 10, bottom: 10),
+                  padding: const EdgeInsets.only(top: 20, bottom: 10),
                   child: Text(
                     'Valor disponível de até',
                     style: TextStyle(
@@ -304,15 +283,12 @@ class _HomePageState extends State<HomePage> {
                         color: Colors.grey.shade700),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(bottom: 5),
-                  child: Text(
-                    'R\$ 2.500,00',
-                    style: TextStyle(
-                        color: Colors.grey.shade800,
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold),
-                  ),
+                Text(
+                  'R\$ 2.500,00',
+                  style: TextStyle(
+                      color: Colors.grey.shade800,
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold),
                 ),
               ],
             ),
@@ -326,15 +302,12 @@ class _HomePageState extends State<HomePage> {
                     child: Icon(MdiIcons.signal),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(bottom: 10),
-                  child: Text(
-                    'Investimentos',
-                    style: Theme.of(context).textTheme.headline5,
-                  ),
+                Text(
+                  'Investimentos',
+                  style: Theme.of(context).textTheme.headline5,
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(top: 10, bottom: 10),
+                  padding: const EdgeInsets.only(top: 20, bottom: 10),
                   child: Text(
                     'O jeito Nu de investir: sem asteriscos, linguagem fácil e a partir de R\$1. Saiba mais.',
                     style: TextStyle(
@@ -346,15 +319,15 @@ class _HomePageState extends State<HomePage> {
                 CustomDecoratedBox(
                   width: 380,
                   child: ListTile(
-                    horizontalTitleGap: 0,
                     leading: const Icon(
                       MdiIcons.diamondStone,
-                      color: Colors.black,
                     ),
                     title: Row(
-                      mainAxisSize: MainAxisSize.min,
                       children: const [
-                        Text('Meu\nPedacinho d...'),
+                        Text(
+                          'Meu\nPedacinho d...',
+                          style: TextStyle(fontSize: 19),
+                        ),
                       ],
                     ),
                     trailing: SizedBox(
@@ -386,15 +359,12 @@ class _HomePageState extends State<HomePage> {
                     child: Icon(MdiIcons.cardsHeartOutline),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(bottom: 10),
-                  child: Text(
-                    'Seguro de Vida',
-                    style: Theme.of(context).textTheme.headline5,
-                  ),
+                Text(
+                  'Seguro de Vida',
+                  style: Theme.of(context).textTheme.headline5,
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(top: 10, bottom: 10),
+                  padding: const EdgeInsets.only(top: 20, bottom: 10),
                   child: Text(
                     'Conheça Nubank Vida: um seguro simples e que cabe no bolso.',
                     style: TextStyle(
@@ -415,15 +385,12 @@ class _HomePageState extends State<HomePage> {
                     child: Icon(Icons.shopping_bag_outlined),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(bottom: 10),
-                  child: Text(
-                    'Shopping',
-                    style: Theme.of(context).textTheme.headline5,
-                  ),
+                Text(
+                  'Shopping',
+                  style: Theme.of(context).textTheme.headline5,
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(top: 10, bottom: 10),
+                  padding: const EdgeInsets.only(top: 20, bottom: 10),
                   child: Text(
                     'Vantagens exclusivas das nossas marcas preferidas',
                     style: TextStyle(
@@ -440,7 +407,7 @@ class _HomePageState extends State<HomePage> {
                   style: Theme.of(context).textTheme.headline5),
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 20, right: 20),
+              padding: const EdgeInsets.only(left: 20, right: 20, bottom: 20),
               child: CustomDecoratedBox(
                 width: 338,
                 child: ListTile(

@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 class CustomDecoratedBox extends StatelessWidget {
   final Widget child;
-  final double width;
+  final double? width;
   final double? height;
   const CustomDecoratedBox(
-      {Key? key, required this.child, required this.width, this.height})
+      {Key? key, required this.child, this.width, this.height})
       : super(key: key);
 
   @override

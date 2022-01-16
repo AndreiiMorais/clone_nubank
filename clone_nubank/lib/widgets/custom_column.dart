@@ -14,7 +14,7 @@ class CustomColumn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 45, bottom: 30),
+      padding: const EdgeInsets.only(top: 35, bottom: 30),
       child: SizedBox(
         width: 92,
         child: Column(
