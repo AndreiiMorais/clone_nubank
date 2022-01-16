@@ -1,5 +1,4 @@
-import 'package:clone_nubank/pages/homepage.dart';
-import 'package:clone_nubank/pages/login_page.dart';
+import 'package:clone_nubank/pages/configs_page.dart';
 import 'package:clone_nubank/themes/themes.dart';
 import 'package:flutter/material.dart';
 
@@ -16,7 +15,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: theme,
-      home: HomePage(),
+      home: ConfigPage(),
     );
   }
 }
