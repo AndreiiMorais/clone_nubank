@@ -1,3 +1,4 @@
+import 'package:clone_nubank/pages/area_pix.dart';
 import 'package:clone_nubank/pages/configs_page.dart';
 import 'package:clone_nubank/pages/homepage.dart';
 import 'package:clone_nubank/pages/me_ajuda_page.dart';

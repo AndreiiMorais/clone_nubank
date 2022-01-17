@@ -1,5 +1,5 @@
 import 'package:clone_nubank/widgets/ajuda_page_custom_bottom_bar.dart';
-import 'package:clone_nubank/widgets/ajuda_page_custom_listtile.dart';
+import 'package:clone_nubank/widgets/custom_listtile.dart';
 import 'package:flutter/material.dart';
 
 class MeAjudaPage extends StatelessWidget {
@@ -55,242 +55,242 @@ class MeAjudaPage extends StatelessWidget {
               physics: BouncingScrollPhysics(),
               shrinkWrap: true,
               children: const [
-                AjudaPageCustomListTile(
+                CustomListTile(
                   title: 'App do Nubank',
                   subtitle:
                       'Saiba mais sobre a tela inicial do seu aplicativo Nubank',
                 ),
-                AjudaPageCustomListTile(
+                CustomListTile(
                   title: 'Pix',
                   subtitle: 'Conheça o novo meio de pagamento.',
                 ),
-                AjudaPageCustomListTile(
+                CustomListTile(
                   title: 'Nubank Ultravioleta',
                   subtitle: 'Conheça tudo sobre o nosso novo cartão de crédito',
                 ),
-                AjudaPageCustomListTile(
+                CustomListTile(
                   title: 'Easynvest by Nubank agora é NuInvest',
                   subtitle: 'Informações gerais sobre a NuInvest',
                 ),
-                AjudaPageCustomListTile(
+                CustomListTile(
                   title: 'Débito Automatico',
                   subtitle: 'Saiba mais sobre o Débito Automatico Nubank',
                 ),
-                AjudaPageCustomListTile(
+                CustomListTile(
                   title: 'Fundos de Investimentos',
                   subtitle: 'Fundos de Investimentos do Nubank',
                 ),
-                AjudaPageCustomListTile(
+                CustomListTile(
                   title: 'Seguro de vida',
                   subtitle: 'Conheça mais sobre o Nubank Vida',
                 ),
-                AjudaPageCustomListTile(
+                CustomListTile(
                   title: 'Coronavírus',
                   subtitle: 'Dúvidas sobre o coronavírus? Veja aqui!',
                 ),
-                AjudaPageCustomListTile(
+                CustomListTile(
                   title: 'Auxílio Emergencial',
                   subtitle: 'Dúvidas sobre o Auxílio Emergencial?',
                 ),
-                AjudaPageCustomListTile(
+                CustomListTile(
                   title: 'Novidades',
                   subtitle: 'Tudo sobre o Nubank e nossos produtos',
                 ),
-                AjudaPageCustomListTile(
+                CustomListTile(
                   title: 'Conta',
                   subtitle: 'Conheça tudo sobre a sua conta digital',
                 ),
-                AjudaPageCustomListTile(
+                CustomListTile(
                   title: 'Cartão de Crédito',
                   subtitle:
                       'Conheça as funcionalidades do Cartão de crédito Nubank',
                 ),
-                AjudaPageCustomListTile(
+                CustomListTile(
                   title: 'Pagar Fatura',
                   subtitle: 'Descubra como e onde pagar a sua fatura',
                 ),
-                AjudaPageCustomListTile(
+                CustomListTile(
                   title: 'Pagamento automático da fatura do cartão de crédito',
                   subtitle:
                       'Saiba mais sobre o pagamento automático da sua fatura',
                 ),
-                AjudaPageCustomListTile(
+                CustomListTile(
                   title: 'Parcelar Fatura',
                   subtitle: 'Veja como parcelar sua fatura.',
                 ),
-                AjudaPageCustomListTile(
+                CustomListTile(
                   title: 'Limite de Crédito',
                   subtitle: 'Tire suas dúvidas sobre seu limite de crédito',
                 ),
-                AjudaPageCustomListTile(
+                CustomListTile(
                   title: 'Cartão Virtual',
                   subtitle: 'Conheça as funcionalidades do cartão virtual',
                 ),
-                AjudaPageCustomListTile(
+                CustomListTile(
                   title: 'Rewards',
                   subtitle: 'Tudo sobre o nosso programa de fidelidade',
                 ),
-                AjudaPageCustomListTile(
+                CustomListTile(
                   title: 'Fatura Atrasada',
                   subtitle:
                       'Saiba sobre suas opções de pagamento da fatura atrasada',
                 ),
-                AjudaPageCustomListTile(
+                CustomListTile(
                   title: 'Empréstimo Atrasado',
                   subtitle: 'Informações sobre seu empréstimo em atraso',
                 ),
-                AjudaPageCustomListTile(
+                CustomListTile(
                   title: 'Compras com o cartão',
                   subtitle: 'imformações sobre suas compras no cartão',
                 ),
-                AjudaPageCustomListTile(
+                CustomListTile(
                   title: 'Problemas com compras na função crédito',
                   subtitle:
                       'Dúvidas sobre cancelamento e estorno de compras na função crédito',
                 ),
-                AjudaPageCustomListTile(
+                CustomListTile(
                   title: 'Problemas com compras na função débito ou saques',
                   subtitle:
                       'Dúvidas sobre cancelamento e estorno de compras na função débito',
                 ),
-                AjudaPageCustomListTile(
+                CustomListTile(
                   title: 'Produção e entrega do cartão',
                   subtitle: 'Informações sobre o recebimento do cartão Nubank',
                 ),
-                AjudaPageCustomListTile(
+                CustomListTile(
                   title: 'Empréstimo Pessoal',
                   subtitle: 'Tire suas dúvidas sobre empréstimo pessoal',
                 ),
-                AjudaPageCustomListTile(
+                CustomListTile(
                   title: 'Empréstimo com Portabilidade de Salário',
                   subtitle:
                       'Tire suas dúvidas sobre empréstimo com portabilidade de salário',
                 ),
-                AjudaPageCustomListTile(
+                CustomListTile(
                   title: 'Compras no exterior',
                   subtitle: 'Cotação, conversão, IOF e Spread.',
                 ),
-                AjudaPageCustomListTile(
+                CustomListTile(
                   title: 'Dados da sua Conta',
                   subtitle: 'Dados cadastrais e senhas.',
                 ),
-                AjudaPageCustomListTile(
+                CustomListTile(
                   title: 'Pagamentos no Whatsapp',
                   subtitle:
                       'Tudo sobre pagamentos que aconteceram no Whatsapp.',
                 ),
-                AjudaPageCustomListTile(
+                CustomListTile(
                   title: 'Segurança',
                   subtitle: 'Tudo sobre a proteção da sua conta',
                 ),
-                AjudaPageCustomListTile(
+                CustomListTile(
                   title: 'Opções de Depósito na sua Conta',
                   subtitle: 'Informações sobre aplicações em RDB.',
                 ),
-                AjudaPageCustomListTile(
+                CustomListTile(
                   title: 'Conta PJ',
                   subtitle: 'Conheça nossa conta para pessoa jurídica',
                 ),
-                AjudaPageCustomListTile(
+                CustomListTile(
                   title: 'Open Banking',
                   subtitle: 'Saiba mais sobre Open Banking',
                 ),
-                AjudaPageCustomListTile(
+                CustomListTile(
                   title: 'Sobre o Nubank',
                   subtitle: 'Junte-se à nossa revolução!',
                 ),
-                AjudaPageCustomListTile(
+                CustomListTile(
                   title: 'Tela de Rendimentos',
                   subtitle: 'Informações sobre a tela de rendimentos.',
                 ),
-                AjudaPageCustomListTile(
+                CustomListTile(
                   title: 'Resgate Planejado',
                   subtitle: 'Informações gerais sobreo Resgate Planejado.',
                 ),
-                AjudaPageCustomListTile(
+                CustomListTile(
                   title: 'Doações',
                   subtitle: 'Faça doações para instituições usando o Nubank',
                 ),
-                AjudaPageCustomListTile(
+                CustomListTile(
                   title: 'LGPD - Privacidade',
                   subtitle: 'Saiba como exercer os seus direitos.',
                 ),
-                AjudaPageCustomListTile(
+                CustomListTile(
                   title: 'Construir Limite',
                   subtitle: 'Conheça mais sobre a função Construir Limite',
                 ),
-                AjudaPageCustomListTile(
+                CustomListTile(
                   title: 'Reemissão de Cartão',
                   subtitle: 'Saiba tudo como pedir uma nova via do seu cartão',
                 ),
-                AjudaPageCustomListTile(
+                CustomListTile(
                   title: 'Notificações',
                   subtitle: 'Dúvidas sobre notificações e comunicações',
                 ),
-                AjudaPageCustomListTile(
+                CustomListTile(
                   title: 'Cadastro positivo',
                   subtitle: 'Saiba tudo sobre cadastro positivo',
                 ),
-                AjudaPageCustomListTile(
+                CustomListTile(
                   title: 'Mastercard',
                   subtitle: 'Saiba mais sobre a Mastercard e seu cartão Nubank',
                 ),
-                AjudaPageCustomListTile(
+                CustomListTile(
                   title: 'Domicílio Bancário',
                   subtitle: 'Receber da maquininha na conta do Nubank',
                 ),
-                AjudaPageCustomListTile(
+                CustomListTile(
                   title: 'Transferência Internacional',
                   subtitle: 'Saiba mais sobre transferências internacionais',
                 ),
-                AjudaPageCustomListTile(
+                CustomListTile(
                   title: 'Análise para liberação da função crédito',
                   subtitle:
                       'Entenda como funciona a análise para liberação de crédito',
                 ),
-                AjudaPageCustomListTile(
+                CustomListTile(
                   title: 'Limites Transacionais',
                   subtitle: 'Saiba mais sobre Limites Transacionais',
                 ),
-                AjudaPageCustomListTile(
+                CustomListTile(
                   title: 'Bolsa de Valores - Dúvidas Gerais',
                   subtitle: 'Saiba mais como funciona a bolsa de valores',
                 ),
-                AjudaPageCustomListTile(
+                CustomListTile(
                   title: 'Bolsa de Valores - Compra e Venda',
                   subtitle:
                       'Saiba mais sobre como funciona a compra e venda de ações na bolsa',
                 ),
-                AjudaPageCustomListTile(
+                CustomListTile(
                   title: 'CDB',
                   subtitle: 'Informações sobre o investimento',
                 ),
-                AjudaPageCustomListTile(
+                CustomListTile(
                   title: 'Outras Dúvidas',
                   subtitle: 'Ainda com dúvidas? Veja aqui.',
                 ),
-                AjudaPageCustomListTile(
+                CustomListTile(
                   title: 'NuSócios',
                   subtitle: 'Tudo sobre o pedacinho do Nubank',
                 ),
-                AjudaPageCustomListTile(
+                CustomListTile(
                   title: 'Ipo do Nubank',
                   subtitle: 'Tudo sobre o IPO do Nubank',
                 ),
-                AjudaPageCustomListTile(
+                CustomListTile(
                   title: 'Limites Pix',
                   subtitle: 'Saiba mais como funcionam os limites Pix',
                 ),
-                AjudaPageCustomListTile(
+                CustomListTile(
                   title: 'Pix Saque e Pix Troco',
                   subtitle: 'Saiba mais sobre o Pix Saque e o Pix Troco',
                 ),
-                AjudaPageCustomListTile(
+                CustomListTile(
                   title: 'Empréstimo com carro como garantia',
                   subtitle:
                       'Tire suas dúvidas sobre empréstimo com carro como garantia',
                 ),
-                AjudaPageCustomListTile(
+                CustomListTile(
                   title: 'Shopping',
                   subtitle: 'Tire suas dúvidas sobre as ofertas e promoções',
                 ),

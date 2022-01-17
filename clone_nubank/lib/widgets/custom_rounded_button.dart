@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-class CustomColumn extends StatelessWidget {
+class CustomRoundedButton extends StatelessWidget {
   final String text;
   final VoidCallback onPressed;
-  IconData icon;
-  CustomColumn(
+  final IconData icon;
+  const CustomRoundedButton(
       {Key? key,
       required this.text,
       required this.onPressed,

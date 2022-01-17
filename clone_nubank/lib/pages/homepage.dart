@@ -1,4 +1,4 @@
-import 'package:clone_nubank/widgets/custom_column.dart';
+import 'package:clone_nubank/widgets/custom_rounded_button.dart';
 import 'package:clone_nubank/widgets/custom_decoratedbox.dart';
 import 'package:clone_nubank/widgets/custom_list.dart';
 import 'package:clone_nubank/widgets/custom_row.dart';
@@ -92,47 +92,47 @@ class _HomePageState extends State<HomePage> {
             ),
             CustomRow(
               children: [
-                CustomColumn(
+                CustomRoundedButton(
                   text: 'Área Pix',
                   onPressed: () {},
                   icon: Icons.local_parking_outlined,
                 ),
-                CustomColumn(
+                CustomRoundedButton(
                   text: 'Pagar',
                   onPressed: () {},
                   icon: MdiIcons.barcode,
                 ),
-                CustomColumn(
+                CustomRoundedButton(
                   text: 'Transferir',
                   onPressed: () {},
                   icon: MdiIcons.cashFast,
                 ),
-                CustomColumn(
+                CustomRoundedButton(
                   text: 'Depositar',
                   onPressed: () {},
                   icon: MdiIcons.cashPlus,
                 ),
-                CustomColumn(
+                CustomRoundedButton(
                   text: 'Pegar emprestad',
                   onPressed: () {},
                   icon: MdiIcons.handCoin,
                 ),
-                CustomColumn(
+                CustomRoundedButton(
                   text: 'Recarga de Celular',
                   onPressed: () {},
                   icon: Icons.phone_android_rounded,
                 ),
-                CustomColumn(
+                CustomRoundedButton(
                   text: 'Cobrar',
                   onPressed: () {},
                   icon: MdiIcons.chatAlertOutline,
                 ),
-                CustomColumn(
+                CustomRoundedButton(
                   text: 'Doação',
                   onPressed: () {},
                   icon: MdiIcons.cardsHeartOutline,
                 ),
-                CustomColumn(
+                CustomRoundedButton(
                   text: 'Transferir Internac.',
                   onPressed: () {},
                   icon: MdiIcons.webCheck,
