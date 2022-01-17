@@ -21,7 +21,11 @@ class ConfigPageCustomHeader extends StatelessWidget {
               const Padding(
                 padding: EdgeInsets.only(top: 30, left: 30, right: 20),
                 child: CircleAvatar(
-                  child: Icon(Icons.person_outline_rounded),
+                  radius: 25,
+                  child: Icon(
+                    Icons.person_outline_rounded,
+                    size: 30,
+                  ),
                 ),
               ),
               Padding(

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 final theme = ThemeData(
   primaryColor: Colors.purple.shade700,
+  primaryColorLight: Colors.purple.shade700,
+  primaryColorDark: Colors.purple.shade700,
   textTheme: const TextTheme(
     bodyText1: TextStyle(
         color: Colors.black, fontSize: 18, fontWeight: FontWeight.bold),
@@ -20,5 +22,4 @@ final theme = ThemeData(
   listTileTheme:
       const ListTileThemeData(horizontalTitleGap: 0, iconColor: Colors.black),
   iconTheme: const IconThemeData(color: Colors.black),
-  
 );

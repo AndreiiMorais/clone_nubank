@@ -1,4 +1,5 @@
 import 'package:clone_nubank/pages/configs_page.dart';
+import 'package:clone_nubank/pages/homepage.dart';
 import 'package:clone_nubank/themes/themes.dart';
 import 'package:flutter/material.dart';
 
