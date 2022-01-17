@@ -22,4 +22,17 @@ final theme = ThemeData(
   listTileTheme:
       const ListTileThemeData(horizontalTitleGap: 0, iconColor: Colors.black),
   iconTheme: const IconThemeData(color: Colors.black),
+  elevatedButtonTheme: ElevatedButtonThemeData(
+    style: ButtonStyle(
+      padding: MaterialStateProperty.all(
+        const EdgeInsets.only(top: 12, bottom: 12),
+      ),
+      backgroundColor: MaterialStateProperty.all(Colors.grey[350]),
+      shape: MaterialStateProperty.all(
+        RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(30),
+        ),
+      ),
+    ),
+  ),
 );
