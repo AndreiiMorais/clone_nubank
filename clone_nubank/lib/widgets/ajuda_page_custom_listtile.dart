@@ -3,13 +3,15 @@ import 'package:flutter/material.dart';
 class AjudaPageCustomListTile extends StatelessWidget {
   final String title;
   final String subtitle;
-  const AjudaPageCustomListTile({Key? key, required this.title, required this.subtitle}) : super(key: key);
+  const AjudaPageCustomListTile(
+      {Key? key, required this.title, required this.subtitle})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Card(
       shape: BeveledRectangleBorder(),
-      margin: EdgeInsets.only(top: 1),
+      margin: EdgeInsets.only(top: 3),
       elevation: 2,
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 5),
