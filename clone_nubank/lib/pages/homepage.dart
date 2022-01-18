@@ -1,5 +1,6 @@
 import 'package:clone_nubank/pages/area_pix.dart';
 import 'package:clone_nubank/pages/configs_page.dart';
+import 'package:clone_nubank/pages/conta_page.dart';
 import 'package:clone_nubank/widgets/custom_rounded_button.dart';
 import 'package:clone_nubank/widgets/custom_decoratedbox.dart';
 import 'package:clone_nubank/widgets/custom_list.dart';
@@ -41,7 +42,7 @@ class _HomePageState extends State<HomePage> {
                         builder: (context) => const ConfigPage(),
                         fullscreenDialog: true,
                       ),
-                    );
+                    ); //adicionar um setState quando voltar da pagina
                   },
                 ),
               ),
@@ -83,7 +84,23 @@ class _HomePageState extends State<HomePage> {
             Padding(
               padding: const EdgeInsets.only(left: 15, right: 15),
               child: ListTile(
-                onTap: () {},
+                onTap: () {
+                  PageRouteBuilder(
+                    pageBuilder: (context, animation, secondaryAnimation) =>
+                        const ContaPage(),
+                    transitionDuration: Duration(milliseconds: 300),
+                    transitionsBuilder:
+                        (context, animation, secondaryAnimation, child) {
+                      return SlideTransition(
+                        position: Tween<Offset>(
+                          begin: const Offset(0.0, -1.0),
+                          end: const Offset(0.0, 0.0),
+                        ).animate(animation),
+                        child: child,
+                      );
+                    },
+                  );
+                },
                 title: Padding(
                   padding: const EdgeInsets.only(bottom: 20),
                   child: Text(
