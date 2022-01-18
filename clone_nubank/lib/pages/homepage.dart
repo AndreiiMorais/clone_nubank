@@ -89,7 +89,7 @@ class _HomePageState extends State<HomePage> {
                     PageRouteBuilder(
                       pageBuilder: (context, animation, secondaryAnimation) =>
                           const ContaPage(),
-                      transitionDuration: Duration(milliseconds: 200),
+                      transitionDuration: const Duration(milliseconds: 200),
                       transitionsBuilder:
                           (context, animation, secondaryAnimation, child) {
                         return SlideTransition(
