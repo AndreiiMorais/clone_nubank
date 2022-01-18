@@ -1,3 +1,6 @@
+// ignore_for_file: prefer_const_constructors
+
+import 'package:clone_nubank/pages/me_ajuda_page.dart';
 import 'package:clone_nubank/widgets/config_page_custom_header.dart';
 import 'package:clone_nubank/widgets/config_page_listtile.dart';
 import 'package:flutter/material.dart';
@@ -17,9 +20,14 @@ class ConfigPage extends StatelessWidget {
       body: SingleChildScrollView(
         physics: const BouncingScrollPhysics(),
         child: Column(
-          children: const [
-            ConfigPageCustomHeader(),
+          children: [
+            const ConfigPageCustomHeader(),
             ConfigPageListTile(
+              onTap: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => const MeAjudaPage(),
+                    fullscreenDialog: true));
+              },
               icon: Icons.help_outline_rounded,
               text: 'Me ajuda',
             ),

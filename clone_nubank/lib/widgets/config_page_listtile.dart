@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 class ConfigPageListTile extends StatelessWidget {
   final IconData icon;
   final String text;
-  const ConfigPageListTile({Key? key, required this.icon, required this.text})
+  final void Function()? onTap;
+  const ConfigPageListTile({Key? key, required this.icon, required this.text, this.onTap})
       : super(key: key);
 
   @override
@@ -15,6 +16,7 @@ class ConfigPageListTile extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.only(left: 10, right: 10),
         child: ListTile(
+          onTap: onTap,
           leading: Icon(icon),
           title: Text(
             text,

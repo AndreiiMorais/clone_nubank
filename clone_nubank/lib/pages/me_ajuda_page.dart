@@ -10,10 +10,7 @@ class MeAjudaPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
-        leading: Icon(
-          Icons.close,
-          color: Colors.black,
-        ), //remover
+        foregroundColor: Colors.grey.shade700,
         centerTitle: true,
         title: Text(
           'Me Ajuda',
