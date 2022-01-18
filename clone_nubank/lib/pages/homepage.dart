@@ -85,20 +85,22 @@ class _HomePageState extends State<HomePage> {
               padding: const EdgeInsets.only(left: 15, right: 15),
               child: ListTile(
                 onTap: () {
-                  PageRouteBuilder(
-                    pageBuilder: (context, animation, secondaryAnimation) =>
-                        const ContaPage(),
-                    transitionDuration: Duration(milliseconds: 300),
-                    transitionsBuilder:
-                        (context, animation, secondaryAnimation, child) {
-                      return SlideTransition(
-                        position: Tween<Offset>(
-                          begin: const Offset(0.0, -1.0),
-                          end: const Offset(0.0, 0.0),
-                        ).animate(animation),
-                        child: child,
-                      );
-                    },
+                  Navigator.of(context).push(
+                    PageRouteBuilder(
+                      pageBuilder: (context, animation, secondaryAnimation) =>
+                          const ContaPage(),
+                      transitionDuration: Duration(milliseconds: 200),
+                      transitionsBuilder:
+                          (context, animation, secondaryAnimation, child) {
+                        return SlideTransition(
+                          position: Tween<Offset>(
+                            begin: const Offset(1.0, 0.0),
+                            end: const Offset(0.0, 0.0),
+                          ).animate(animation),
+                          child: child,
+                        );
+                      },
+                    ),
                   );
                 },
                 title: Padding(
