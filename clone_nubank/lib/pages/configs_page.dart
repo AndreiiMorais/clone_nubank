@@ -9,6 +9,11 @@ class ConfigPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        foregroundColor: Colors.grey.shade700,
+        elevation: 0,
+        backgroundColor: Colors.grey[350],
+      ),
       body: SingleChildScrollView(
         physics: const BouncingScrollPhysics(),
         child: Column(

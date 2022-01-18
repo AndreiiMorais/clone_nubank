@@ -1,3 +1,5 @@
+import 'package:clone_nubank/pages/area_pix.dart';
+import 'package:clone_nubank/pages/configs_page.dart';
 import 'package:clone_nubank/widgets/custom_rounded_button.dart';
 import 'package:clone_nubank/widgets/custom_decoratedbox.dart';
 import 'package:clone_nubank/widgets/custom_list.dart';
@@ -33,7 +35,14 @@ class _HomePageState extends State<HomePage> {
                     color: Colors.white,
                     size: 30,
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => const ConfigPage(),
+                        fullscreenDialog: true,
+                      ),
+                    );
+                  },
                 ),
               ),
             ),
@@ -94,7 +103,13 @@ class _HomePageState extends State<HomePage> {
               children: [
                 CustomRoundedButton(
                   text: 'Área Pix',
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                          builder: (_) => const AreaPixPage(),
+                          fullscreenDialog: true),
+                    );
+                  },
                   icon: Icons.local_parking_outlined,
                 ),
                 CustomRoundedButton(

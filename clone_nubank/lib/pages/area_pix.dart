@@ -10,15 +10,9 @@ class AreaPixPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        foregroundColor: Colors.grey.shade700,
         elevation: 0,
         backgroundColor: Colors.white,
-        leading: IconButton(
-          icon: Icon(
-            Icons.close,
-            color: Colors.grey.shade700,
-          ),
-          onPressed: () => Navigator.of(context).pop(),
-        ),
         actions: [
           IconButton(
             icon: Icon(

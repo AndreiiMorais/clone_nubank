@@ -7,19 +7,15 @@ class ConfigPageCustomHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.grey[350],
-      height: 280,
+      height: 170,
       width: MediaQuery.of(context).size.width,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Padding(
-            padding: EdgeInsets.only(left: 30, top: 55),
-            child: Icon(Icons.close),
-          ),
           Row(
             children: [
               const Padding(
-                padding: EdgeInsets.only(top: 30, left: 30, right: 20),
+                padding: EdgeInsets.only(top: 5, left: 20, right: 15),
                 child: CircleAvatar(
                   radius: 25,
                   child: Icon(
@@ -29,7 +25,7 @@ class ConfigPageCustomHeader extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 30),
+                padding: const EdgeInsets.only(top: 5),
                 child: Text(
                   'Usuário',
                   style: Theme.of(context).textTheme.bodyText2,
@@ -38,7 +34,7 @@ class ConfigPageCustomHeader extends StatelessWidget {
             ],
           ),
           Padding(
-            padding: const EdgeInsets.only(left: 30, right: 25, top: 30),
+            padding: const EdgeInsets.only(left: 20, right: 25, top: 30),
             child: Text(
               'Agência 0001 • Conta 00000000-0 • Banco 0260 • Nu Pagamentos S.A. - Instituição de Pagamento',
               style: Theme.of(context).textTheme.bodyText2,
