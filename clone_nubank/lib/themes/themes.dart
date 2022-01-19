@@ -6,9 +6,15 @@ final theme = ThemeData(
   primaryColorDark: Colors.purple.shade700,
   textTheme: const TextTheme(
     bodyText1: TextStyle(
-        color: Colors.black, fontSize: 18, fontWeight: FontWeight.bold),
-    bodyText2: TextStyle(color: Colors.black, fontSize: 18),
-    headline6: TextStyle(color: Colors.black),
+      color: Colors.black,
+      fontSize: 18,
+      fontWeight: FontWeight.bold,
+    ),
+    bodyText2: TextStyle(
+      color: Colors.black,
+      fontSize: 18,
+    ),
+    headline3: TextStyle(color: Colors.black),
     headline4: TextStyle(
       color: Colors.black,
       fontSize: 28,
@@ -18,6 +24,7 @@ final theme = ThemeData(
       color: Colors.black,
       fontWeight: FontWeight.bold,
     ),
+    headline6: TextStyle(color: Colors.black),
   ),
   listTileTheme:
       const ListTileThemeData(horizontalTitleGap: 0, iconColor: Colors.black),
