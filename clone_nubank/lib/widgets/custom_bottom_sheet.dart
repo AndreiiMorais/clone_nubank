@@ -204,6 +204,7 @@ class CustomBottonSheet {
               child: SingleChildScrollView(
                 physics: const BouncingScrollPhysics(),
                 child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Row(
@@ -219,6 +220,7 @@ class CustomBottonSheet {
                       style: Theme.of(context).textTheme.headline3,
                     ),
                     CustomListTile(
+                      contentPadding: const EdgeInsets.symmetric(vertical: 15),
                       leading: const Padding(
                         padding: EdgeInsets.only(top: 25),
                         child: Icon(Icons.local_parking),
@@ -229,12 +231,14 @@ class CustomBottonSheet {
                       trailing: const Icon(Icons.arrow_forward_ios, size: 20),
                     ),
                     CustomListTile(
+                      contentPadding: const EdgeInsets.symmetric(vertical: 15),
                       leading: const Icon(MdiIcons.barcode),
                       title: 'Receber em até 3 dias, sem custo',
                       subtitle: 'Gere um boleto de depósito.',
                       trailing: const Icon(Icons.arrow_forward_ios, size: 20),
                     ),
                     CustomListTile(
+                      contentPadding: const EdgeInsets.symmetric(vertical: 15),
                       leading: const Icon(MdiIcons.cashPlus),
                       title: 'Copiar dados da conta',
                       subtitle:
@@ -242,6 +246,7 @@ class CustomBottonSheet {
                       trailing: const Icon(Icons.arrow_forward_ios, size: 20),
                     ),
                     CustomListTile(
+                      contentPadding: const EdgeInsets.symmetric(vertical: 15),
                       leading: const Padding(
                         padding: EdgeInsets.only(top: 25),
                         child: Icon(MdiIcons.cashMultiple),
@@ -252,6 +257,33 @@ class CustomBottonSheet {
                       trailing: const Icon(Icons.arrow_forward_ios, size: 20),
                     ),
                   ],
+                ),
+              ),
+            ),
+          ],
+        );
+      },
+    );
+  }
+  void recargaBottomSheet(
+      {required BuildContext context,
+      double? height,
+      double? width,
+      required String saldo}) {
+    showModalBottomSheet(
+      isScrollControlled: true,
+      context: context,
+      builder: (context) {
+        return Wrap(
+          children: [
+            SizedBox(
+              height: height,
+              width: width,
+              child: SingleChildScrollView(
+                physics: const BouncingScrollPhysics(),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [],
                 ),
               ),
             ),
