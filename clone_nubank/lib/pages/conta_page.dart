@@ -53,7 +53,7 @@ class ContaPage extends StatelessWidget {
             ),
           ),
           ListTile(
-            contentPadding: const EdgeInsets.only(top: 20, left: 20),
+            contentPadding: const EdgeInsets.only(top: 20, left: 20, right: 20),
             leading: const Padding(
               padding: EdgeInsets.only(
                 top: 7,
@@ -77,7 +77,7 @@ class ContaPage extends StatelessWidget {
             ),
           ),
           ListTile(
-            contentPadding: const EdgeInsets.only(top: 20, left: 20),
+            contentPadding: const EdgeInsets.only(top: 20, left: 20, right: 20),
             leading: const Padding(
               padding: EdgeInsets.only(top: 7),
               child: Icon(MdiIcons.signal),
@@ -92,11 +92,11 @@ class ContaPage extends StatelessWidget {
             subtitle: RichText(
               text: TextSpan(
                   text: '+R\$ 0,00',
-                  style: TextStyle(color: Colors.green.shade800),
+                  style: TextStyle(color: Colors.green.shade800, fontSize: 20),
                   children: const [
                     TextSpan(
                       text: ' este mês',
-                      style: TextStyle(color: Colors.black),
+                      style: TextStyle(color: Colors.black, fontSize: 20),
                     )
                   ]),
             ),
@@ -143,18 +143,38 @@ class ContaPage extends StatelessWidget {
                     text: 'Cobrar',
                     onPressed: () {},
                   ),
-                  CustomDecoratedBox(
-                    height: 50,
-                    width: 100,
-                    child: ListTile(
-                      leading: Icon(
-                        MdiIcons.handCoin,
-                        color: Colors.black,
-                      ),
-                      title: RichText(text: TextSpan(text: 'Até ', style: TextStyle(Colors.black))),
-                    ),
-                  )
                 ],
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+            child: CustomDecoratedBox(
+              child: ListTile(
+                leading: const Icon(
+                  MdiIcons.handCoin,
+                  color: Colors.black,
+                ),
+                title: RichText(
+                  text: const TextSpan(
+                    text: 'Até ',
+                    style: TextStyle(fontSize: 20, color: Colors.black),
+                    children: [
+                      TextSpan(
+                        text: 'R\$ 2.500,00 ',
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 20),
+                      ),
+                      TextSpan(
+                          text: 'disponíveis para empréstimo.',
+                          style: TextStyle(fontSize: 20))
+                    ],
+                  ),
+                ),
+                trailing: const Icon(
+                  Icons.arrow_forward_ios,
+                  size: 18,
+                ),
               ),
             ),
           )

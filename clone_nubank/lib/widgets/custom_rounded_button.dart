@@ -14,7 +14,7 @@ class CustomRoundedButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 35, bottom: 30),
+      padding: const EdgeInsets.only(top: 35, bottom: 30, left: 10),
       child: SizedBox(
         width: 92,
         child: Column(

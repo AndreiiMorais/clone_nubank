@@ -10,7 +10,7 @@ class CustomRow extends StatelessWidget {
       physics: const BouncingScrollPhysics(),
       scrollDirection: Axis.horizontal,
       child: Padding(
-        padding: const EdgeInsets.only(left: 20),
+        padding: const EdgeInsets.only(left: 10),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: children,
