@@ -5,6 +5,7 @@ class CustomListTile extends StatelessWidget {
   final String subtitle;
   final Widget? trailing;
   final int? maxLines;
+  final Widget? leading;
   final EdgeInsetsGeometry? contentPadding;
   TextOverflow? overflow;
   CustomListTile(
@@ -14,7 +15,8 @@ class CustomListTile extends StatelessWidget {
       this.trailing,
       this.maxLines,
       this.overflow,
-      this.contentPadding})
+      this.contentPadding,
+      this.leading})
       : super(key: key) {
     if (maxLines == null) {
       overflow = null;
@@ -30,8 +32,9 @@ class CustomListTile extends StatelessWidget {
       margin: const EdgeInsets.only(top: 3),
       elevation: 5,
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 5),
+        padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 10),
         child: ListTile(
+          leading: leading,
           contentPadding: contentPadding,
           trailing: trailing,
           title: Text(

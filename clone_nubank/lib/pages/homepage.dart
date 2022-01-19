@@ -1,21 +1,28 @@
 import 'package:clone_nubank/pages/area_pix.dart';
 import 'package:clone_nubank/pages/configs_page.dart';
 import 'package:clone_nubank/pages/conta_page.dart';
+import 'package:clone_nubank/themes/themes.dart';
+import 'package:clone_nubank/widgets/custom_bottom_sheet.dart';
+import 'package:clone_nubank/widgets/custom_listtile.dart';
 import 'package:clone_nubank/widgets/custom_rounded_button.dart';
 import 'package:clone_nubank/widgets/custom_decoratedbox.dart';
 import 'package:clone_nubank/widgets/custom_list.dart';
 import 'package:clone_nubank/widgets/custom_row.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+  final TextEditingController control = TextEditingController(text: 'R\$ 0,00');
+  CustomBottonSheet bottonSheet = CustomBottonSheet();
+  HomePage({Key? key}) : super(key: key);
 
   @override
   _HomePageState createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
+  final String saldo = 'R\$ 0,00';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -110,8 +117,8 @@ class _HomePageState extends State<HomePage> {
                     style: Theme.of(context).textTheme.headline5,
                   ),
                 ),
-                subtitle: Text('R\$ 0,00',
-                    style: Theme.of(context).textTheme.headline4),
+                subtitle:
+                    Text(saldo, style: Theme.of(context).textTheme.headline4),
                 trailing: const Icon(
                   Icons.arrow_forward_ios_rounded,
                   size: 17,
@@ -133,12 +140,130 @@ class _HomePageState extends State<HomePage> {
                 ),
                 CustomRoundedButton(
                   text: 'Pagar',
-                  onPressed: () {},
+                  onPressed: () {
+                    widget.bottonSheet.showBottomSheet(
+                      context: context,
+                      height: MediaQuery.of(context).size.height * .85,
+                      children: [
+                        Row(
+                          children: [
+                            IconButton(
+                              icon: const Icon(Icons.close),
+                              onPressed: () => Navigator.of(context).pop(),
+                            ),
+                          ],
+                        ),
+                        CustomListTile(
+                          leading: const Icon(Icons.local_parking),
+                          title: 'Pagar com Pix',
+                          subtitle: 'Leia um QR Code ou cole o código',
+                          trailing: const Icon(
+                            Icons.arrow_forward_ios,
+                            size: 20,
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 50),
+                          child: CustomListTile(
+                            leading: const Icon(Icons.credit_card_rounded),
+                            title: 'Pagar fatura do cartão',
+                            subtitle:
+                                'Libere o limite do seu cartão de crédito',
+                            trailing: const Icon(
+                              Icons.arrow_forward_ios,
+                              size: 20,
+                            ),
+                          ),
+                        ),
+                        CustomListTile(
+                          leading: const Icon(MdiIcons.barcode),
+                          title: 'Pagar boleto com saldo da Conta',
+                          subtitle:
+                              'use o saldo da sua conta do Nubank para pagar seus boletos',
+                          trailing: const Icon(
+                            Icons.arrow_forward_ios,
+                            size: 20,
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 50),
+                          child: CustomListTile(
+                            leading: const Icon(MdiIcons.barcode),
+                            title: 'Pagar boleto com cartão de crédito',
+                            subtitle:
+                                'Use o limite do seu cartão para pagar suas contas em até 12x',
+                            trailing: const Icon(
+                              Icons.arrow_forward_ios,
+                              size: 20,
+                            ),
+                          ),
+                        ),
+                      ],
+                    );
+                  },
                   icon: MdiIcons.barcode,
                 ),
                 CustomRoundedButton(
                   text: 'Transferir',
-                  onPressed: () {},
+                  onPressed: () {
+                    widget.control.text = 'R\$ 0,00';
+                    widget.bottonSheet.showBottomSheet(
+                      height: MediaQuery.of(context).size.height * .90,
+                      context: context,
+                      children: [
+                        Row(
+                          children: [
+                            IconButton(
+                              icon: Icon(Icons.close),
+                              onPressed: () => Navigator.of(context).pop(),
+                            ),
+                            Spacer(),
+                            IconButton(
+                              icon: Icon(MdiIcons.qrcode),
+                              onPressed: () {},
+                            )
+                          ],
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(20.0),
+                          child: Text(
+                            'Qual é o valor da transferência?',
+                            style: Theme.of(context).textTheme.headline3,
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 20),
+                          child: Text(
+                            'Saldo disponível em conta',
+                            style: TextStyle(
+                                fontSize: 20, color: Colors.grey.shade600),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 20),
+                          child: Text(
+                            saldo,
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold, fontSize: 20),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(
+                              right: 20, left: 20, top: 40),
+                          child: TextField(
+                            //nao está formatado corretamente, editar isso no futuro
+                            controller: widget.control,
+                            keyboardType: TextInputType.number,
+                            inputFormatters: [
+                              FilteringTextInputFormatter.digitsOnly,
+                              FilteringTextInputFormatter.singleLineFormatter,
+                            ],
+                            style: Theme.of(context).textTheme.headline3,
+                          ),
+                        ),
+                      ],
+                    );
+                  },
                   icon: MdiIcons.cashFast,
                 ),
                 CustomRoundedButton(
