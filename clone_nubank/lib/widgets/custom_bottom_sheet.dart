@@ -215,12 +215,16 @@ class CustomBottonSheet {
                         ),
                       ],
                     ),
-                    Text(
-                      'Como você quer depositar na sua conta do Nubank?',
-                      style: Theme.of(context).textTheme.headline3,
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 15),
+                      child: Text(
+                        'Como você quer depositar na sua conta do Nubank?',
+                        style: Theme.of(context).textTheme.headline3,
+                      ),
                     ),
                     CustomListTile(
-                      contentPadding: const EdgeInsets.symmetric(vertical: 15),
+                      contentPadding: const EdgeInsets.symmetric(
+                          vertical: 15, horizontal: 15),
                       leading: const Padding(
                         padding: EdgeInsets.only(top: 25),
                         child: Icon(Icons.local_parking),
@@ -231,14 +235,16 @@ class CustomBottonSheet {
                       trailing: const Icon(Icons.arrow_forward_ios, size: 20),
                     ),
                     CustomListTile(
-                      contentPadding: const EdgeInsets.symmetric(vertical: 15),
+                      contentPadding: const EdgeInsets.symmetric(
+                          vertical: 15, horizontal: 15),
                       leading: const Icon(MdiIcons.barcode),
                       title: 'Receber em até 3 dias, sem custo',
                       subtitle: 'Gere um boleto de depósito.',
                       trailing: const Icon(Icons.arrow_forward_ios, size: 20),
                     ),
                     CustomListTile(
-                      contentPadding: const EdgeInsets.symmetric(vertical: 15),
+                      contentPadding: const EdgeInsets.symmetric(
+                          vertical: 15, horizontal: 15),
                       leading: const Icon(MdiIcons.cashPlus),
                       title: 'Copiar dados da conta',
                       subtitle:
@@ -246,7 +252,8 @@ class CustomBottonSheet {
                       trailing: const Icon(Icons.arrow_forward_ios, size: 20),
                     ),
                     CustomListTile(
-                      contentPadding: const EdgeInsets.symmetric(vertical: 15),
+                      contentPadding: const EdgeInsets.symmetric(
+                          vertical: 15, horizontal: 15),
                       leading: const Padding(
                         padding: EdgeInsets.only(top: 25),
                         child: Icon(MdiIcons.cashMultiple),
@@ -265,6 +272,7 @@ class CustomBottonSheet {
       },
     );
   }
+
   void recargaBottomSheet(
       {required BuildContext context,
       double? height,
