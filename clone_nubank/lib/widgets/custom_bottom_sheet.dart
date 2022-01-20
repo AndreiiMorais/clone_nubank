@@ -5,6 +5,7 @@ import 'package:material_design_icons_flutter/material_design_icons_flutter.dart
 
 class CustomBottonSheet {
   TextEditingController control = TextEditingController(text: 'R\$ 0,00');
+  TextEditingController controller = TextEditingController();
   showBottomSheet(
       {required BuildContext context,
       required List<Widget> children,
@@ -291,7 +292,37 @@ class CustomBottonSheet {
                 physics: const BouncingScrollPhysics(),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [],
+                  children: [
+                    Row(
+                      children: [
+                        IconButton(
+                          icon: const Icon(Icons.close),
+                          onPressed: () => Navigator.of(context).pop(),
+                        ),
+                      ],
+                    ),
+                    ListView(
+                      physics: const NeverScrollableScrollPhysics(),
+                      shrinkWrap: true,
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 20, vertical: 20),
+                      children: [
+                        Text(
+                          'Qual número você quer recarregar?',
+                          style: Theme.of(context).textTheme.headline3,
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 20),
+                          child: TextField(
+                            controller: controller,
+                            decoration:
+                                InputDecoration(hintText: '(DDD) + Número'),
+                            style: TextStyle(fontSize: 40),
+                          ),
+                        )
+                      ],
+                    )
+                  ],
                 ),
               ),
             ),

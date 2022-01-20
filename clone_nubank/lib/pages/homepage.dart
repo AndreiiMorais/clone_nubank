@@ -155,7 +155,7 @@ class _HomePageState extends State<HomePage> {
                     widget.bottonSheet.tranferirBottomSheet(
                         height: MediaQuery.of(context).size.height * .90,
                         context: context,
-                        saldo: saldo);
+                        saldo: 'R\$ 0,00');
                   },
                   icon: MdiIcons.cashFast,
                 ),
@@ -182,7 +182,13 @@ class _HomePageState extends State<HomePage> {
                 ),
                 CustomRoundedButton(
                   text: 'Recarga de Celular',
-                  onPressed: () {},
+                  onPressed: () {
+                    widget.bottonSheet.recargaBottomSheet(
+                      context: context,
+                      saldo: saldo,
+                      height: MediaQuery.of(context).size.height * .90,
+                    );
+                  },
                   icon: Icons.phone_android_rounded,
                 ),
                 CustomRoundedButton(
