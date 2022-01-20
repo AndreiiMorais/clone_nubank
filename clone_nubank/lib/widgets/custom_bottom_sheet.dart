@@ -1,6 +1,7 @@
 import 'package:clone_nubank/widgets/custom_listtile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:lottie/lottie.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 class CustomBottonSheet {
@@ -440,6 +441,83 @@ class CustomBottonSheet {
                         )
                       ],
                     )
+                  ],
+                ),
+              ),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
+  void indicarBottomSheet({
+    required BuildContext context,
+    double? height,
+    double? width,
+  }) {
+    showModalBottomSheet(
+      isScrollControlled: true,
+      context: context,
+      builder: (context) {
+        return Wrap(
+          children: [
+            SizedBox(
+              height: height,
+              width: width,
+              child: SingleChildScrollView(
+                physics: const BouncingScrollPhysics(),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      children: [
+                        IconButton(
+                          icon: const Icon(Icons.close),
+                          onPressed: () => Navigator.of(context).pop(),
+                        ),
+                      ],
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(20),
+                      child: Text(
+                        'Resgate seus amigos da fila do banco',
+                        style: TextStyle(fontSize: 25),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 20),
+                      child: Text(
+                        'Para cada indicação aceita, um amigo salvo da burocracia',
+                        style: TextStyle(color: Colors.grey.shade600),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(20),
+                      child: ElevatedButton(
+                        onPressed: () {},
+                        child: const Text('INDICAR AMIGOS'),
+                        style: ButtonStyle(
+                          backgroundColor:
+                              MaterialStateProperty.all(Colors.white),
+                          padding:
+                              MaterialStateProperty.all(const EdgeInsets.all(10)),
+                          foregroundColor:
+                              MaterialStateProperty.all(Colors.purple.shade700),
+                          shape: MaterialStateProperty.all(
+                            RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(2),
+                            ),
+                          ),
+                          side: MaterialStateProperty.all(
+                            BorderSide(
+                                color: Colors.purple.shade700,
+                                style: BorderStyle.solid),
+                          ),
+                        ),
+                      ),
+                    ),
+                    Lottie.asset('assets/lottie.json'),
                   ],
                 ),
               ),

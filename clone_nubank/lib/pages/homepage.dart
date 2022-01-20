@@ -2,21 +2,19 @@ import 'package:clone_nubank/pages/area_pix.dart';
 import 'package:clone_nubank/pages/configs_page.dart';
 import 'package:clone_nubank/pages/conta_page.dart';
 import 'package:clone_nubank/pages/emprestimo_page.dart';
+import 'package:clone_nubank/pages/me_ajuda_page.dart';
 import 'package:clone_nubank/pages/transf_intern_page.dart';
-import 'package:clone_nubank/themes/themes.dart';
 import 'package:clone_nubank/widgets/custom_bottom_sheet.dart';
-import 'package:clone_nubank/widgets/custom_listtile.dart';
 import 'package:clone_nubank/widgets/custom_rounded_button.dart';
 import 'package:clone_nubank/widgets/custom_decoratedbox.dart';
 import 'package:clone_nubank/widgets/custom_list.dart';
 import 'package:clone_nubank/widgets/custom_row.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 class HomePage extends StatefulWidget {
   final TextEditingController control = TextEditingController(text: 'R\$ 0,00');
-  CustomBottonSheet bottonSheet = CustomBottonSheet();
+  final CustomBottonSheet bottonSheet = CustomBottonSheet();
   HomePage({Key? key}) : super(key: key);
 
   @override
@@ -69,7 +67,13 @@ class _HomePageState extends State<HomePage> {
               IconButton(
                 splashColor: Colors.purple.shade900,
                 icon: const Icon(Icons.help_outline_rounded),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                        builder: (context) => const MeAjudaPage(),
+                        fullscreenDialog: true),
+                  );
+                },
               ),
               Padding(
                 padding: const EdgeInsets.only(right: 20),
@@ -78,7 +82,9 @@ class _HomePageState extends State<HomePage> {
                   icon: const Icon(
                     MdiIcons.emailPlusOutline,
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    widget.bottonSheet.indicarBottomSheet(context: context);
+                  },
                 ),
               )
             ],

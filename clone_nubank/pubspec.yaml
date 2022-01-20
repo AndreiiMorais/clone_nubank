@@ -35,6 +35,8 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   material_design_icons_flutter:
+  lottie:
+  local_auth:
 
 dev_dependencies:
   flutter_test:
@@ -62,6 +64,7 @@ flutter:
   assets:
      - assets/nubank_splash.png
      - assets/emprest_logo.jpg
+     - assets/lottie.json
   # fonts:
   #     - family:  MyCustomIcons
   #       fonts:

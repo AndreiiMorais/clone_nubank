@@ -1,3 +1,4 @@
+import 'package:clone_nubank/controllers/login_controller.dart';
 import 'package:clone_nubank/pages/area_pix.dart';
 import 'package:clone_nubank/pages/configs_page.dart';
 import 'package:clone_nubank/pages/homepage.dart';
@@ -6,14 +7,16 @@ import 'package:clone_nubank/themes/themes.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  BiometricAuth biometricAuth = BiometricAuth();
+  MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    biometricAuth.isDeviceSupported();
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
