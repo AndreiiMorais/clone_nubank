@@ -110,9 +110,8 @@ class EmprestimoPage extends StatelessWidget {
                   style: Theme.of(context).textTheme.headline5,
                 ),
               ),
-              Padding(
-                padding:
-                    const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+              const Padding(
+                padding: EdgeInsets.symmetric(vertical: 20, horizontal: 20),
                 child: Text(
                   'No Nubank, você simula as condições de acordo com o que precisa e escolhe a melhor opção pra você.',
                   style: TextStyle(fontSize: 20),
@@ -125,7 +124,7 @@ class EmprestimoPage extends StatelessWidget {
                   backgroundColor: Colors.grey[350],
                   radius: 40,
                   child: IconButton(
-                    icon: Icon(
+                    icon: const Icon(
                       MdiIcons.clockTimeFiveOutline,
                       size: 30,
                       color: Colors.black,
@@ -141,11 +140,40 @@ class EmprestimoPage extends StatelessWidget {
                   style: Theme.of(context).textTheme.headline5,
                 ),
               ),
+              const Padding(
+                padding: EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+                child: Text(
+                  'Depois da contratação, o dinheiro cai na sua conta do Nubank na hora, sem burocracia.',
+                  style: TextStyle(fontSize: 20),
+                ),
+              ),
               Padding(
                 padding:
                     const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+                child: CircleAvatar(
+                  backgroundColor: Colors.grey[350],
+                  radius: 40,
+                  child: IconButton(
+                    icon: const Icon(
+                      Icons.credit_card_outlined,
+                      color: Colors.black,
+                      size: 30,
+                    ),
+                    onPressed: () {},
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: Text(
-                  'Depois da contratação, o dinheiro cai na sua conta do Nubank na hora, sem burocracia.',
+                  'Fique no controle',
+                  style: Theme.of(context).textTheme.headline5,
+                ),
+              ),
+              const Padding(
+                padding: EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+                child: Text(
+                  'Você gerencia os pagamentos de forma fácil. Antecipe parcelas com desconto sempre que quiser.',
                   style: TextStyle(fontSize: 20),
                 ),
               )
