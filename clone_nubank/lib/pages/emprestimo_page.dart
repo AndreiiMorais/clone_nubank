@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 class EmprestimoPage extends StatelessWidget {
   const EmprestimoPage({Key? key}) : super(key: key);
@@ -35,8 +36,8 @@ class EmprestimoPage extends StatelessWidget {
                   backgroundColor: Colors.black45,
                   child: Center(
                     child: IconButton(
-                      padding: EdgeInsets.all(0),
-                      icon: Icon(
+                      padding: const EdgeInsets.all(0),
+                      icon: const Icon(
                         Icons.help_outline_rounded,
                         color: Colors.white,
                       ),
@@ -58,13 +59,98 @@ class EmprestimoPage extends StatelessWidget {
             ),
           ),
         ],
-        body: Column(
-          children: [
-            Text(
-              'Empréstimo do jeito Nubank.',
-              style: Theme.of(context).textTheme.headline3,
-            )
-          ],
+        body: SingleChildScrollView(
+          physics: const BouncingScrollPhysics(),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: Text(
+                  'Empréstimo do jeito Nubank.',
+                  style: Theme.of(context).textTheme.headline3,
+                ),
+              ),
+              Padding(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+                child: Text(
+                  'Você no controle do início ao fim.',
+                  style: TextStyle(color: Colors.grey.shade600, fontSize: 20),
+                ),
+              ),
+              Padding(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
+                child: Text(
+                  'Veja como funciona:',
+                  style: Theme.of(context).textTheme.headline3,
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: CircleAvatar(
+                  radius: 40,
+                  backgroundColor: Colors.grey[350],
+                  child: IconButton(
+                    icon: const Icon(
+                      MdiIcons.tuneVariant,
+                      color: Colors.black,
+                      size: 30,
+                    ),
+                    onPressed: () {},
+                  ),
+                ),
+              ),
+              Padding(
+                padding:
+                    const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+                child: Text(
+                  'Simule fácil',
+                  style: Theme.of(context).textTheme.headline5,
+                ),
+              ),
+              Padding(
+                padding:
+                    const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+                child: Text(
+                  'No Nubank, você simula as condições de acordo com o que precisa e escolhe a melhor opção pra você.',
+                  style: TextStyle(fontSize: 20),
+                ),
+              ),
+              Padding(
+                padding:
+                    const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+                child: CircleAvatar(
+                  backgroundColor: Colors.grey[350],
+                  radius: 40,
+                  child: IconButton(
+                    icon: Icon(
+                      MdiIcons.clockTimeFiveOutline,
+                      size: 30,
+                      color: Colors.black,
+                    ),
+                    onPressed: () {},
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: Text(
+                  'Receba na hora',
+                  style: Theme.of(context).textTheme.headline5,
+                ),
+              ),
+              Padding(
+                padding:
+                    const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+                child: Text(
+                  'Depois da contratação, o dinheiro cai na sua conta do Nubank na hora, sem burocracia.',
+                  style: TextStyle(fontSize: 20),
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );
