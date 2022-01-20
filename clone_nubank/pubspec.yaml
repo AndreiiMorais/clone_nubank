@@ -61,10 +61,12 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
      - assets/nubank_splash.png
-  fonts:
-      - family:  MyCustomIcons
-        fonts:
-        - asset: assets/fonts/MyFlutterApp.ttf
+     - assets/emprest_logo.jpg
+  # fonts:
+  #     - family:  MyCustomIcons
+  #       fonts:
+  #       - asset: assets/fonts/MyFlutterApp.ttf
+        
 
 
 

@@ -1,6 +1,7 @@
 import 'package:clone_nubank/pages/area_pix.dart';
 import 'package:clone_nubank/pages/configs_page.dart';
 import 'package:clone_nubank/pages/conta_page.dart';
+import 'package:clone_nubank/pages/emprestimo_page.dart';
 import 'package:clone_nubank/themes/themes.dart';
 import 'package:clone_nubank/widgets/custom_bottom_sheet.dart';
 import 'package:clone_nubank/widgets/custom_listtile.dart';
@@ -169,7 +170,14 @@ class _HomePageState extends State<HomePage> {
                 ),
                 CustomRoundedButton(
                   text: 'Pegar emprestad',
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => const EmprestimoPage(),
+                        fullscreenDialog: true,
+                      ),
+                    );
+                  },
                   icon: MdiIcons.handCoin,
                 ),
                 CustomRoundedButton(
