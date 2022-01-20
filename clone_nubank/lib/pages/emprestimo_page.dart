@@ -181,6 +181,21 @@ class EmprestimoPage extends StatelessWidget {
           ),
         ),
       ),
+      bottomNavigationBar: BottomAppBar(
+        child: Padding(
+          padding: const EdgeInsets.all(20),
+          child: ElevatedButton(
+            style: ButtonStyle(
+                backgroundColor:
+                    MaterialStateProperty.all(Colors.purple.shade700)),
+            onPressed: () {},
+            child: const Text(
+              'Calcular empréstimo',
+              style: TextStyle(fontSize: 20),
+            ),
+          ),
+        ),
+      ),
     );
   }
 }
