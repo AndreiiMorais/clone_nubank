@@ -331,4 +331,122 @@ class CustomBottonSheet {
       },
     );
   }
+
+  void cobrarBottomSheet(
+      {required BuildContext context,
+      double? height,
+      double? width,
+      required String saldo}) {
+    showModalBottomSheet(
+      isScrollControlled: true,
+      context: context,
+      builder: (context) {
+        return Wrap(
+          children: [
+            SizedBox(
+              height: height,
+              width: width,
+              child: SingleChildScrollView(
+                physics: const BouncingScrollPhysics(),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      children: [
+                        IconButton(
+                          icon: const Icon(Icons.close),
+                          onPressed: () => Navigator.of(context).pop(),
+                        ),
+                      ],
+                    ),
+                    ListView(
+                      physics: const NeverScrollableScrollPhysics(),
+                      shrinkWrap: true,
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 20, vertical: 20),
+                      children: [
+                        Text(
+                          'Qual valor você quer receber?',
+                          style: Theme.of(context).textTheme.headline3,
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 20),
+                          child: TextField(
+                            controller: controller,
+                            decoration: InputDecoration(hintText: 'R\$ 0,00'),
+                            style: TextStyle(fontSize: 40),
+                          ),
+                        )
+                      ],
+                    )
+                  ],
+                ),
+              ),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
+  void transfInternBottomSheet(
+      {required BuildContext context,
+      double? height,
+      double? width,
+      required String saldo}) {
+    showModalBottomSheet(
+      isScrollControlled: true,
+      context: context,
+      builder: (context) {
+        return Wrap(
+          children: [
+            SizedBox(
+              height: height,
+              width: width,
+              child: SingleChildScrollView(
+                physics: const BouncingScrollPhysics(),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      children: [
+                        IconButton(
+                          icon: const Icon(Icons.close),
+                          onPressed: () => Navigator.of(context).pop(),
+                        ),
+                      ],
+                    ),
+                    ListView(
+                      physics: const NeverScrollableScrollPhysics(),
+                      shrinkWrap: true,
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 20, vertical: 20),
+                      children: [
+                        Text(
+                          'Transferência Internacional',
+                          style: Theme.of(context).textTheme.headline3,
+                        ),
+                        Text(
+                          'Envie e receba dinheiro do exterior de maneira rápida e segura.',
+                          style: TextStyle(
+                              fontSize: 20, color: Colors.grey.shade700),
+                        ),
+                        CustomListTile(
+                          leading: Icon(MdiIcons.cashMultiple),
+                          title: 'Enviar',
+                          subtitle:
+                              'Faça seu dinheiro chegar em mais de 100 países em apenas um dia útil.',
+                          trailing: Icon(Icons.arrow_forward_ios, size: 20),
+                        )
+                      ],
+                    )
+                  ],
+                ),
+              ),
+            ),
+          ],
+        );
+      },
+    );
+  }
 }

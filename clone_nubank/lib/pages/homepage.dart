@@ -2,6 +2,7 @@ import 'package:clone_nubank/pages/area_pix.dart';
 import 'package:clone_nubank/pages/configs_page.dart';
 import 'package:clone_nubank/pages/conta_page.dart';
 import 'package:clone_nubank/pages/emprestimo_page.dart';
+import 'package:clone_nubank/pages/transf_intern_page.dart';
 import 'package:clone_nubank/themes/themes.dart';
 import 'package:clone_nubank/widgets/custom_bottom_sheet.dart';
 import 'package:clone_nubank/widgets/custom_listtile.dart';
@@ -193,7 +194,13 @@ class _HomePageState extends State<HomePage> {
                 ),
                 CustomRoundedButton(
                   text: 'Cobrar',
-                  onPressed: () {},
+                  onPressed: () {
+                    widget.bottonSheet.cobrarBottomSheet(
+                      context: context,
+                      saldo: saldo,
+                      height: MediaQuery.of(context).size.height * .90,
+                    );
+                  },
                   icon: MdiIcons.chatAlertOutline,
                 ),
                 CustomRoundedButton(
@@ -203,7 +210,15 @@ class _HomePageState extends State<HomePage> {
                 ),
                 CustomRoundedButton(
                   text: 'Transferir Internac.',
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) =>
+                            const TransferenciaInternacionalPage(),
+                        fullscreenDialog: true,
+                      ),
+                    );
+                  },
                   icon: MdiIcons.webCheck,
                 ),
               ],
