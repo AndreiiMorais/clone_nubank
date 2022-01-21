@@ -38,7 +38,7 @@ class BiometricAuth {
     _availableBiometrics = availableBiometrics;
   }
 
-  Future<void> authenticate() async {
+  Future<bool> authenticate() async {
     bool authenticated = false;
     try {
       _isAuthenticating = true;
@@ -54,6 +54,7 @@ class BiometricAuth {
       _authorized = 'Error - ${e.message}';
     }
     _authorized = authenticated ? 'Autorizado' : 'nao autorizado';
+    return authenticated;
   }
 }
 
