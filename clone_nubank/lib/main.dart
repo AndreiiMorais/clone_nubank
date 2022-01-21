@@ -12,12 +12,10 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  BiometricAuth biometricAuth = BiometricAuth();
   MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    biometricAuth.isDeviceSupported();
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
