@@ -50,6 +50,14 @@ class BiometricAuth {
     if (await _isBiometricAvailable()) {
       await _getAvailableBiometrics();
       await _authenticate(context);
+    } else {
+      await Future.delayed(Duration(seconds: 4), () {
+        Navigator.of(context).pushReplacement(
+          MaterialPageRoute(
+            builder: (context) => HomePage(),
+          ),
+        );
+      });
     }
   }
 }
